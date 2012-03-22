@@ -98,7 +98,7 @@ store(extendedK) 'CcEeGgJjNnOoSsTtYyZz'
 '=' dk(1) + "'" >  U+A78C c Lowercase Saltillo
 '=' dk(1) + '"' >  U+A78B c Uppercase Saltillo
    
-c \
+c \ (backslash)
 store(specialO) '©ÐðƐɛªǤǥĸ—º–ŉØø¶℗®§ſ‡†µ×¡¦¨¬­¯°±´·¸¿÷‰•¹²³⁴⁵⁶⁷⁸⁹⁰'
 store(specialK) "cDdEefGgkMmNnOoPprSsTtux!|:~-_*+'.,?/%>1234567890"
 
