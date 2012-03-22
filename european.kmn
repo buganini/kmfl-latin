@@ -21,7 +21,7 @@ begin Unicode > use(Main)
 
 group( Main ) using keys
 
-store(controls)  "`#'" '"' "^%&(~-_:@.|,=\$"
+store(controls)  "`#'" '"' "^%&(~-_:@*|,=\$"
               
 c `
 store(graveO)    'àèìǹòùẁỳÀÈÌǸÒÙẀỲ'
@@ -80,7 +80,7 @@ c @
 store(ringO) 'åÅůŮẘẙ'
 store(ringK) 'aAuUwy'
 
-c .
+c *
 store(dottedO) 'ȧȦḃḂċĊḋḊėĖḟḞġĠḣḢıİȷŀĿṁṀṅṄȯȮṗṖṙṘṡṠṫṪẇẆẋẊẏẎżŻ'
 store(dottedK) 'aAbBcCdDeEfFgGhHiIjlLmMnNoOpPrRsStTwWxXyYzZ'
 
@@ -119,7 +119,7 @@ store(currencyK) 'CcDdEefFGghkKlNnPpRrtwy'
 '_' dk(1) + any(lineK) > index(lineO, 3)
 ':' dk(1) + any(dieresisK) > index(dieresisO, 3)
 '@' dk(1) + any(ringK) > index(ringO, 3)
-'.' dk(1) + any(dottedK) > index(dottedO, 3) 
+'*' dk(1) + any(dottedK) > index(dottedO, 3) 
 '|' dk(1) + any(dotbelowK) > index(dotbelowO, 3)
 ',' dk(1) + any(cedillaK) > index(cedillaO, 3)
 '=' dk(1) + any(extendedK) > index(extendedO, 3)
