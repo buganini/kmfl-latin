@@ -21,11 +21,25 @@ begin Unicode > use(Main)
 
 group( Main ) using keys
 
-store(controls)  "`#'" '"' "^%&(~-_:@*|,=\$"
+store(controls)  "`#'" '"' "^%&(~-_:@*|,=\$+?"
+store(controls1)  "`'~.?"
+store(controls2)  "(^+"
               
 c `
 store(graveO)    'àèìǹòùẁỳÀÈÌǸÒÙẀỲ'
 store(graveK)    'aeinouwyAEINOUWY'
+
+c `(
+store(grave_breveO) 'ằẰ'
+store(grave_breveK) 'aA'
+
+c `^
+store(grave_circumO) 'ầẦềỀồỒ'
+store(grave_circumK) 'aAeEoO'
+
+c `+
+store(grave_hornO) 'ờỜừỪ'
+store(grave_hornK) 'oOuU'
 
 c #
 store(doublegraveO) 'ȁȅȉȍȑȕȀȄȈȌȐȔ'
@@ -34,6 +48,18 @@ store(doublegraveK) 'aeioruAEIORU'
 c '
 store(acuteO) 'áćéǵíḱĺḿńóṕŕśúẃýźÁĆÉǴÍḰĹḾŃÓṔŔŚÚẂÝŹ'
 store(acuteK) 'acegiklmnoprsuwyzACEGIKLMNOPRSUWYZ'
+
+c '(
+store(acute_breveO) 'ắẮ'
+store(acute_breveK) 'aA'
+
+c '^
+store(acute_circumO) 'ấẤếẾốỐ'
+store(acute_circumK) 'aAeEoO'
+
+c '+
+store(acute_hornO) 'ớỚứỨ'
+store(acute_hornK) 'oOuU'
 
 c "
 store(doubleacuteO) 'őűŐŰ'
@@ -61,6 +87,17 @@ store(tildeK) 'aAeEiIlLnNoOuUvVyY'
 '~' dk(1) + "g" > U+0067 U+0303    c for Guaraní
 '~' dk(1) + "G" > U+0047 U+0303    c for Guaraní
 
+c ~(
+store(tilde_breveO) 'ẵẴ'
+store(tilde_breveK) 'aA'
+
+c ~^
+store(tilde_circumO) 'ẫẪễỄỗỖ'
+store(tilde_circumK) 'aAeEoO'
+
+c ~+
+store(tilde_hornO) 'ỡỠữỮ'
+store(tilde_hornK) 'oOuU'
 
 c -
 store(macronO) 'ĀāɃƀĐđĒēḠḡĦħĪīɈɉŁłŌōɌɍŦŧŪūȲȳƵƶ'
@@ -106,15 +143,56 @@ c $
 store(currencyO) '¤¢₯₫€€₱₣₲₰₴₡₭₤₦₪₧£₹₨₮₩¥'
 store(currencyK) 'CcDdEefFGghkKlNnPpRrtwy'
 
+c ?
+store(hookO) 'ảẢɓƁƈƇɗƊẻẺƒƑɠƓỉỈƙƘɱⱮỏỎƥƤʠƭƬủỦʋƲⱳⱲƴƳỷỶȥȤ'
+store(hookK) 'aAbBcCdDeEfFgGiIkKmMoOpPqtTuUvVwWxXyYzZ'
+
+c ?(
+store(hook_breveO) 'ẳẲ'
+store(hook_breveK) 'aA'
+
+c ?^
+store(hook_circumO) 'ẩẨểỂổỔ'
+store(hook_circumK) 'aAeEoO'
+
+c ?+
+store(hook_hornO) 'ởỞửỬ'
+store(hook_hornK) 'oOuU'
+
+c .
+store(underdottedO) 'ạẠẹẸịỊọỌụỤỵỴ'
+store(underdottedK) 'aAeEiIoOuUyY'
+
+c .(
+store(underdotted_breveO) 'ặẶ'
+store(underdotted_breveK) 'aA'
+
+c .^
+store(underdotted_circumO) 'ậẬệỆộỘ'
+store(underdotted_circumK) 'aAeEoO'
+
+c .+
+store(underdotted_hornO) 'ợỢựỰ'
+store(underdotted_hornK) 'oOuU'
+
 "`" dk(1) + any(graveK) > index(graveO, 3)
+"`" '(' dk(2) + any(grave_breveK) > index(grave_breveO, 4)
+"`" '^' dk(2) + any(grave_circumK) > index(grave_circumO, 4)
+"`" '+' dk(2) + any(grave_hornK) > index(grave_hornO, 4)
 "#" dk(1) + any(doublegraveK) > index(doublegraveO, 3)
 "'" dk(1) + any(acuteK) > index(acuteO, 3)
+"'" '(' dk(2) + any(acute_breveK) > index(acute_breveO, 4)
+"'" '^' dk(2) + any(acute_circumK) > index(acute_circumO, 4)
+"'" '+' dk(2) + any(acute_hornK) > index(acute_hornO, 4)
 '"' dk(1) + any(doubleacuteK) > index(doubleacuteO, 3)
 "^" dk(1) + any(circumK) > index(circumO, 3)
 '%' dk(1) + any(caronK) > index(caronO, 3)
 '&' dk(1) + any(antibreveK) > index(antibreveO, 3)
 '(' dk(1) + any(breveK) > index(breveO, 3)
 '~' dk(1) + any(tildeK) > index(tildeO, 3)
+'~' '(' dk(2) + any(tilde_breveK) > index(tilde_breveO, 4)
+'~' '^' dk(2) + any(tilde_circumK) > index(tilde_circumO, 4)
+'~' '+' dk(2) + any(tilde_hornK) > index(tilde_hornO, 4)
 '-' dk(1) + any(macronK) > index(macronO, 3)
 '_' dk(1) + any(lineK) > index(lineO, 3)
 ':' dk(1) + any(dieresisK) > index(dieresisO, 3)
@@ -125,7 +203,14 @@ store(currencyK) 'CcDdEefFGghkKlNnPpRrtwy'
 '=' dk(1) + any(extendedK) > index(extendedO, 3)
 '\' dk(1) + any(specialK) > index(specialO, 3)
 '$' dk(1) + any(currencyK) > index(currencyO, 3)
-
+'.' dk(1) + any(underdottedK) > index(underdottedO, 3)
+'.' '(' dk(2) + any(underdotted_breveK) > index(underdotted_breveO, 4)
+'.' '^' dk(2) + any(underdotted_circumK) > index(underdotted_circumO, 4)
+'.' '+' dk(2) + any(underdotted_hornK) > index(underdotted_hornO, 4)
+'?' dk(1) + any(hookK) > index(hookO, 3)
+'?' '(' dk(2) + any(hook_breveK) > index(hook_breveO, 4)
+'?' '^' dk(2) + any(hook_circumK) > index(hook_circumO, 4)
+'?' '+' dk(2) + any(hook_hornK) > index(hook_hornO, 4)
 '·.' + '.' > '…'
 
 
@@ -218,7 +303,10 @@ c Rules for the accent character itself (type it twice)
 '=' dk(1) + '=' > '='  c equals sign
 '\' dk(1) + '\' > '\'  c backslash
 '$' dk(1) + '$' > '$'  c dollar
+'+' dk(1) + '+' > '+'  c plus
+'?' dk(1) + '?' > '?'  c question mark
 
 + any(controls) > index(controls, 1) dk(1)
+any(controls1) dk(1) + any(controls2) > index(controls1, 1) index(controls2, 3) dk(2)
 
 c End of keyboard
