@@ -21,7 +21,7 @@ begin Unicode > use(Main)
 
 group( Main ) using keys
 
-store(controls)  "`#'" '"' "^%&(~-_:@*|,=\$+?"
+store(controls)  "`#'" '"' "^%&()~-_:@*|,=\$+?"
 store(controls1)  "`'~.?"
 store(controls2)  "(^+"
               
@@ -80,6 +80,10 @@ store(antibreveK) 'AaEeIiOoRrUu'
 c (
 store(breveO) 'ăĂĕĔğĞḫḪĭĬŏŎŭŬ'
 store(breveK) 'aAeEgGhHiIoOuU'
+
+c )
+store(ibreveO) 'ȃȂȇȆȋȊȏȎȗȖȓȒ'
+store(ibreveK) 'aAeEiIoOuUrR' 
 
 c ~
 store(tildeO) 'ãÃẽẼĩĨɫⱢñÑõÕũŨṽṼỹỸ'
@@ -189,6 +193,7 @@ store(underdotted_hornK) 'oOuU'
 '%' dk(1) + any(caronK) > index(caronO, 3)
 '&' dk(1) + any(antibreveK) > index(antibreveO, 3)
 '(' dk(1) + any(breveK) > index(breveO, 3)
+')' dk(1) + any(ibreveK) > index(ibreveO, 3)
 '~' dk(1) + any(tildeK) > index(tildeO, 3)
 '~' '(' dk(2) + any(tilde_breveK) > index(tilde_breveO, 4)
 '~' '^' dk(2) + any(tilde_circumK) > index(tilde_circumO, 4)
