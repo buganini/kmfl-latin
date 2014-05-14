@@ -1,5 +1,5 @@
 ﻿c EuroLatin keyboard for Keyman Desktop 7.0 and KeymanWeb 1.0
-c 
+c
 c If you make changes to this keyboard file, please consider sharing them at:
 c http://www.tavultesoft.com/forums/category.php?ForumSourceID=1&SourceID=348
 
@@ -7,7 +7,7 @@ VERSION 7.0
 store(&NAME) 'EuroLatin Keyboard'
 store(&BITMAP) 'latin.ico'
 store(&COPYRIGHT) 'Copyright (C) 1994-2011 Tavultesoft Pty Ltd'
-     
+
 store(&mnemoniclayout) '1'
 
 c KeymanWeb-specific header statements
@@ -24,7 +24,7 @@ group( Main ) using keys
 store(controls)  "`#'" '"' "^%&()~-_:@*|,=\$+?"
 store(controls1)  "`'~.?"
 store(controls2)  "(^+"
-              
+
 c `
 store(graveO)    'àèìǹòùẁỳÀÈÌǸÒÙẀỲ'
 store(graveK)    'aeinouwyAEINOUWY'
@@ -68,7 +68,7 @@ store(doubleacuteK) 'ouOU'
 c ^
 store(circumO)   'âĉêĝĥîĵôŝûŵŷẑÂĈÊĜĤÎĴÔŜÛŴŶẐ'
 store(circumK)   'aceghijosuwyzACEGHIJOSUWYZ'
-   
+
 c %
 store(caronO) 'ǎǍčČďĎěĚǧǦȟȞǐǏǰǩǨľĽňŇǒǑřŘšŠťŤǔǓǯǮžŽ'
 store(caronK) 'aAcCdDeEgGhHiIjkKlLnNoOrRsStTuUxXzZ'
@@ -81,13 +81,13 @@ c (
 store(breveO) 'ăĂĕĔğĞḫḪĭĬŏŎŭŬ'
 store(breveK) 'aAeEgGhHiIoOuU'
 
-c )
+c ) (same as antibreve)
 store(ibreveO) 'ȃȂȇȆȋȊȏȎȗȖȓȒ'
-store(ibreveK) 'aAeEiIoOuUrR' 
+store(ibreveK) 'aAeEiIoOuUrR'
 
 c ~
 store(tildeO) 'ãÃẽẼĩĨɫⱢñÑõÕũŨṽṼỹỸ'
-store(tildeK) 'aAeEiIlLnNoOuUvVyY'               
+store(tildeK) 'aAeEiIlLnNoOuUvVyY'
 '~' dk(1) + "g" > U+0067 U+0303    c for Guaraní
 '~' dk(1) + "G" > U+0047 U+0303    c for Guaraní
 
@@ -131,14 +131,14 @@ store(dotbelowK) 'AaBbDdEeHhIiKkLlMmNnOoRrSsTtUuVvWwYyZz'
 
 c ,
 store(cedillaO) 'ąĄçÇḑḐęĘģĢḩḨįĮķĶļĻņŅǫǪŗŖşŞţŢųŲⱬⱫ'
-store(cedillaK) 'aAcCdDeEgGhHiIkKlLnNoOrRsStTuUzZ'  
+store(cedillaK) 'aAcCdDeEgGhHiIkKlLnNoOrRsStTuUzZ'
 
 c =
 store(extendedO) 'ƆɔƏəɁɂƝɲŊŋƟɵẞßÞþȜȝƷʒ'
 store(extendedK) 'CcEeGgJjNnOoSsTtYyZz'
 '=' dk(1) + "'" >  U+A78C c Lowercase Saltillo
 '=' dk(1) + '"' >  U+A78B c Uppercase Saltillo
-   
+
 c \ (backslash)
 store(specialO) '©ÐðƐɛªǤǥĸ—º–ŉØø¶℗®§ſ‡†µ×¡¦¨¬­¯°±´·¸¿÷‰•¹²³⁴⁵⁶⁷⁸⁹⁰'
 store(specialK) "cDdEefGgkMmNnOoPprSsTtux!|:~-_*+'.,?/%>1234567890"
@@ -202,7 +202,7 @@ store(underdotted_hornK) 'oOuU'
 '_' dk(1) + any(lineK) > index(lineO, 3)
 ':' dk(1) + any(dieresisK) > index(dieresisO, 3)
 '@' dk(1) + any(ringK) > index(ringO, 3)
-'*' dk(1) + any(dottedK) > index(dottedO, 3) 
+'*' dk(1) + any(dottedK) > index(dottedO, 3)
 '|' dk(1) + any(dotbelowK) > index(dotbelowO, 3)
 ',' dk(1) + any(cedillaK) > index(cedillaO, 3)
 '=' dk(1) + any(extendedK) > index(extendedO, 3)
@@ -220,25 +220,25 @@ store(underdotted_hornK) 'oOuU'
 
 
 c Preferred for diagraphs
-'A\' dk(1) + 'E' > 'Æ'      
-'a\' dk(1) + 'e' > 'æ'      
+'A\' dk(1) + 'E' > 'Æ'
+'a\' dk(1) + 'e' > 'æ'
 'D\' dk(1) + 'Z' > U+01C4   c Serbian additions 1/5/09
-'D\' dk(1) + 'z' > U+01C5   
-'d\' dk(1) + 'z' > U+01C6  
+'D\' dk(1) + 'z' > U+01C5
+'d\' dk(1) + 'z' > U+01C6
 'f\' dk(1) + 'i' > 'ﬁ'
-'f\' dk(1) + 'l' > 'ﬂ' 
+'f\' dk(1) + 'l' > 'ﬂ'
 'I\' dk(1) + 'J' > 'Ĳ'
 'i\' dk(1) + 'j' > 'ĳ'
 'L\' dk(1) + 'J' > U+01C7   c Serbian additions 1/5/09
-'L\' dk(1) + 'j' > U+01C8   
-'l\' dk(1) + 'j' > U+01C9  
+'L\' dk(1) + 'j' > U+01C8
+'l\' dk(1) + 'j' > U+01C9
 'N\' dk(1) + 'G' > 'Ŋ'      c depricated - see extended - no longer in help/osk
 'n\' dk(1) + 'g' > 'ŋ'      c depricated - see extended - no longer in help/osk
 'N\' dk(1) + 'J' > U+01CA   c Serbian additions 1/5/09
-'N\' dk(1) + 'j' > U+01CB   
-'n\' dk(1) + 'j' > U+01CC 
+'N\' dk(1) + 'j' > U+01CB
+'n\' dk(1) + 'j' > U+01CC
 'N\' dk(1) + 'O' > '№'
-'n\' dk(1) + 'o' > '№'  
+'n\' dk(1) + 'o' > '№'
 'O\' dk(1) + 'E' > 'Œ'
 'o\' dk(1) + 'e' > 'œ'
 'O\' dk(1) + 'I' > 'Ƣ'
@@ -257,7 +257,7 @@ c Preferred for diagraphs
 '1//' + '4' > '¼'
 '3//' + '4' > '¾'
 '1//' + '5' > '⅕'
-'2//' + '5' > '⅖'                                                              
+'2//' + '5' > '⅖'
 '3//' + '5' > '⅗'
 '4//' + '5' > '⅘'
 '1//' + '6' > '⅙'
@@ -293,7 +293,7 @@ c Rules for the accent character itself (type it twice)
 '#' dk(1) + '#' > '#'  c number sign
 "'" dk(1) + "'" > "'"  c apostrophe
 '"' dk(1) + '"' > '"'  c quotation mark
-"^" dk(1) + "^" > "^"  c caret         
+"^" dk(1) + "^" > "^"  c caret
 '%' dk(1) + '%' > '%'  c percent sign
 '&' dk(1) + '&' > '&'  c ampersand
 '*' dk(1) + '*' > '*'  c asterisk
@@ -301,8 +301,8 @@ c Rules for the accent character itself (type it twice)
 '-' dk(1) + '-' > '-'  c hyphen
 '_' dk(1) + '_' > '_'  c low line
 ':' dk(1) + ':' > ':'  c double-quote
-'@' dk(1) + '@' > '@'  c ring 
-'.' dk(1) + '.' > '.'  c full stop 
+'@' dk(1) + '@' > '@'  c ring
+'.' dk(1) + '.' > '.'  c full stop
 '|' dk(1) + '|' > '|'  c vertical line
 ',' dk(1) + ',' > ','  c comma
 '=' dk(1) + '=' > '='  c equals sign
