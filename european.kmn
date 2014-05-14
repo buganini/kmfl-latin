@@ -163,9 +163,9 @@ c ?+
 store(hook_hornO) 'ởỞửỬ'
 store(hook_hornK) 'oOuU'
 
-c .
-store(underdottedO) 'ạẠẹẸịỊọỌụỤỵỴ'
-store(underdottedK) 'aAeEiIoOuUyY'
+c . (same as dotbelow)
+store(underdottedO) 'ẠạḄḅḌḍẸẹḤḥỊịḲḳḶḷṂṃṆṇỌọṚṛṢṣṬṭỤụṾṿẈẉỴỵẒẓ'
+store(underdottedK) 'AaBbDdEeHhIiKkLlMmNnOoRrSsTtUuVvWwYyZz'
 
 c .(
 store(underdotted_breveO) 'ặẶ'
